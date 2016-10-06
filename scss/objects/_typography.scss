@@ -1,0 +1,92 @@
+@include typi-init;
+
+html {
+  @include ff(primary);
+
+  @include fw(primary, normal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include ff(header);
+
+  @include fw(header, medium);
+}
+
+h1 {
+  @include typi("h1", $rem: false);
+}
+
+h2 {
+  @include typi("h2", $rem: false);
+}
+
+h2 + ul {
+  margin-top: vr(1, 1em);
+}
+
+h2 + *:not(h1) {
+  margin-top: vr(0.5, 1em);
+}
+
+h3 {
+  @include typi("h3", $rem: false);
+}
+
+h3 + ul {
+  margin-top: vr(0.5, 1em);
+}
+
+ul + p {
+  margin-top: vr(0.5, 1em);
+}
+
+blockquote {
+  @include ff(quote);
+
+  @include fw(quote, normal);
+
+  font-style: italic;
+}
+
+.small {
+  @include typi('small', $rem:false);
+  color: #999;
+}
+strong {
+  @include fw(primary, medium);
+}
+
+code {
+  @include typi("code", $rem: false);
+
+  font-family: 'Hack', Consolas, 'Andale Mono', 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.1);
+  tab-size: 2;
+  padding: vr(0.0625, 1em) vr(0.125, 1em);
+}
+
+li > code {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+pre, style {
+  border: 2px solid black;
+}
+
+pre > code {
+  @include typi("base", $rem: false);
+
+  padding: vr(0.5, 1em) vr(0.5, 1em);
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2A7E6C;
+  &:hover,
+  &:active,
+  &:focus {
+    color: color(saffron);
+  }
+}

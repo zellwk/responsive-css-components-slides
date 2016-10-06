@@ -1,0 +1,16 @@
+// Color
+// -----
+// An easy way to get colors from the $colors map
+// =====
+
+@function color($color, $map: $colors) {
+  @return map-get($map, $color);
+}
+
+@mixin cf {
+  &:after {
+    display: table;
+    clear: both;
+    content: ' ';
+  }
+}

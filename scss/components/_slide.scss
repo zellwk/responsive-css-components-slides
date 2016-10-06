@@ -1,0 +1,99 @@
+// Grids. Split into 24 horizontal rows. 12 vertical rows
+.slide {
+  padding: percentage(1 / 24) percentage(1 / 24) percentage(1 / 12);
+  background: color(intro);
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.slide li {
+  margin-left: vr(0.25, 1em) + 1em;
+  list-style-type: square;
+}
+
+.slide blockquote {
+  &:before {
+    position: fixed;
+    top: -0.43em;
+    letter-spacing: -0.09em;
+    left: -0.1em;
+    font-size: 40em;
+    content: '‘‘';
+    color: rgba(0,0,0,0.18);
+  }
+}
+
+.slide blockquote p {
+  @include typi(h3, $rem: false);
+
+  text-align: center;
+  max-width: vr(16, ms(1));
+}
+
+.slide cite {
+  display: block;
+  margin-top: vr(0.125, ms(-1));
+  @include typi(small, $rem: false);
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+// Modifiers
+.slide--single-word {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide--image {
+  background-position: center center;
+  background-size: cover;
+}
+
+.slide--divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    text-align: center;
+    max-width: 80%;
+  }
+}
+
+.slide--exercise {
+  .slide__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: linear-gradient(currentColor, currentColor) no-repeat;
+    background-size: 100% vr(0.125, 1em);
+    background-position: 0 2.0em;
+  }
+
+  .slide__time {
+    float: right;
+  }
+
+  .slide__content {
+    margin-top: vr(0.75, 1em);
+  }
+}
+
+.slide__header {
+  @include themify {
+    text-shadow: 0.03em 0 theme(background), -0.03em 0 theme(background), 0.1em 0 theme(background), -0.1em 0 theme(background), 0.2em 0 theme(background), -0.2em 0 theme(background);
+  }
+}
+
+// Themes
+@each $key, $value in $themes {
+  .#{$key} {
+    background: map-get($value, background);
+    color: map-get($value, color);
+  }
+}

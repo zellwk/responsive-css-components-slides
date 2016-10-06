@@ -1,0 +1,70 @@
+$ms-base: 1em;
+$ms-ratio: 1.25;
+
+$typi:(
+  base: (
+    null: 16px 1.4
+  ),
+  h1: (
+    null: ms(5) 1.05
+  ),
+  h2: (
+    null: ms(3) 1.2
+  ),
+  h3: (
+    null: ms(1) 1.25
+  ),
+  b: (
+    null: ms(0) 1.4
+  ),
+  small: (
+    null: ms(-1)
+  ),
+  code: (
+    null: ms(-2) 1.3
+  ),
+  sct: (
+    null: ms(5) 1.2
+  ),
+  scb: (
+    null: ms(2) 1.3
+  ),
+  sct2: (
+    null: ms(2) 1.2
+  ),
+  scb2: (
+    null: ms(1) 1.3
+  )
+);
+
+// Nicer Ampersands
+@font-face {
+  font-family: 'Ampersand';
+  src: local('Baskerville-Italic'), local('GoudyOldStyleT-Italic'), local('Palatino-Italic'), local('Garamond-Italic');
+  unicode-range: U+26;
+}
+
+$typefaces: (
+  primary: (
+    stack: ('mr-eaves-xl-modern', sans-serif),
+    weights: (
+      normal: 300,
+      bold: 700
+    )
+  ),
+  header: (
+    stack: ('Ampersand', 'mr-eaves-xl-modern-narrow', sans-serif),
+    weights: (
+      light: 100,
+      normal: 300,
+      medium: 700,
+      bold: 700
+    )
+  ),
+  quote: (
+    stack: ('mrs-eaves-xl-serif', serif),
+    weights: (normal: 400)
+  )
+);
+
+ // 'mr-eaves-xl-modern-narrow'

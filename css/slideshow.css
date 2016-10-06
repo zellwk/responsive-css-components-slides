@@ -1,0 +1,111 @@
+/**
+  Basic CSS so that the slideshow script functions as a slideshow
+  @author Lea Verou
+  @version 1.0
+ */
+.slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 250%;
+  line-height: 1.6;
+  opacity: 0;
+  overflow: hidden;
+  counter-increment: slide;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity; }
+
+.slide:target {
+  z-index: 100;
+  opacity: 1;
+  height: auto;
+  width: auto;
+  overflow: visible; }
+
+/**
+  Slide numbers
+ */
+.slide:target::before {
+  content: counter(slide);
+  position: absolute;
+  top: .05in;
+  right: .5em;
+  z-index: 1010;
+  font-size: .15in;
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  text-shadow: 0 .05em .1em black;
+  text-align: center;
+  padding: .1em .3em 0;
+  min-width: 1.6em;
+  box-sizing: border-box;
+  border-radius: 50%; }
+
+/* If there's nothing selected, show the first */
+.slide:first-child {
+  z-index: 2; }
+
+/* Delayed items that are shown incrementally after the slide is */
+.slide .delayed {
+  opacity: 0;
+  -webkit-transition: .7s opacity;
+  transition: .7s opacity; }
+
+.slide .delayed.displayed {
+  opacity: .3; }
+
+.slide .delayed.current,
+.slide .delayed.displayed.non-dismissable {
+  opacity: 1; }
+
+.slide .dismissed {
+  opacity: .3; }
+
+/**
+  Show thumbnails
+ */
+.show-thumbnails .slide {
+  width: 1024px;
+  height: 768px;
+  box-sizing: border-box;
+  float: left;
+  overflow: hidden;
+  position: static;
+  opacity: 1;
+  margin: -292px -395px;
+  cursor: pointer;
+  -webkit-transform: scale(0.2, 0.2);
+          transform: scale(0.2, 0.2);
+  -webkit-transition: 1s -webkit-transform;
+  transition: 1s -webkit-transform;
+  transition: 1s transform;
+  transition: 1s transform, 1s -webkit-transform; }
+
+.show-thumbnails .slide .delayed {
+  opacity: 1; }
+
+.show-thumbnails .slide:hover {
+  outline: 20px solid rgba(255, 255, 255, 0.6);
+  -moz-outline-radius: 5px;
+  box-shadow: 5px 5px 10px black; }
+
+/* Mark slides as incomplete to spot them easier */
+.incomplete.slide::after {
+  content: 'INCOMPLETE';
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  padding: .1em .4em 0;
+  border: .1em solid;
+  color: rgba(255, 0, 0, 0.8);
+  font-size: 140%;
+  border-radius: .2em;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg); }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNsaWRlc2hvdy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7O0dBSUc7QUFFSDtFQUNFLG1CQUFtQjtFQUNuQixPQUFPO0VBQ1AsU0FBUztFQUNULFVBQVU7RUFDVixRQUFRO0VBQ1IsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixpQkFBaUI7RUFDakIsV0FBVztFQUNYLGlCQUFpQjtFQUNqQix5QkFBeUI7RUFDekIsK0JBQXVCO0VBQXZCLHVCQUF1QixFQUN4Qjs7QUFFRDtFQUNFLGFBQWE7RUFDYixXQUFXO0VBQ1gsYUFBYTtFQUNiLFlBQVk7RUFDWixrQkFBa0IsRUFDbkI7O0FBRUQ7O0dBRUc7QUFDSDtFQUNFLHdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsV0FBVztFQUNYLFlBQVk7RUFDWixjQUFjO0VBQ2QsaUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixnQ0FBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGdDQUFnQztFQUNoQyxtQkFBbUI7RUFDbkIscUJBQXFCO0VBQ3JCLGlCQUFpQjtFQUNqQix1QkFBdUI7RUFDdkIsbUJBQW1CLEVBQ3BCOztBQUVELGlEQUFpRDtBQUNqRDtFQUNFLFdBQVcsRUFDWjs7QUFFRCxtRUFBbUU7QUFDbkU7RUFDRSxXQUFXO0VBQ1gsZ0NBQXdCO0VBQXhCLHdCQUF3QixFQUN6Qjs7QUFFRDtFQUNFLFlBQVksRUFDYjs7QUFFRDs7RUFFRSxXQUFXLEVBQ1o7O0FBRUQ7RUFDRSxZQUFZLEVBQ2I7O0FBRUQ7O0dBRUc7QUFFSDtFQUNFLGNBQWM7RUFDZCxjQUFjO0VBQ2QsdUJBQXVCO0VBQ3ZCLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsaUJBQWlCO0VBQ2pCLFdBQVc7RUFDWCxzQkFBc0I7RUFDdEIsZ0JBQWdCO0VBQ2hCLG1DQUFnQjtVQUFoQiwyQkFBZ0I7RUFDaEIseUNBQXlCO0VBQXpCLGlDQUF5QjtFQUF6Qix5QkFBeUI7RUFBekIsK0NBQXlCLEVBQzFCOztBQUVEO0VBQ0UsV0FBVyxFQUNaOztBQUVEO0VBQ0UsNkNBQXdCO0VBQ3hCLHlCQUF5QjtFQUN6QiwrQkFBK0IsRUFDaEM7O0FBRUQsbURBQW1EO0FBQ25EO0VBQ0Usc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkIsU0FBUztFQUNULFVBQVU7RUFDVixxQkFBcUI7RUFDckIsbUJBQW1CO0VBQ25CLDRCQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLG9CQUFvQjtFQUNwQixpQ0FBaUI7VUFBakIseUJBQWlCLEVBQ2xCIiwiZmlsZSI6InNsaWRlc2hvdy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAgQmFzaWMgQ1NTIHNvIHRoYXQgdGhlIHNsaWRlc2hvdyBzY3JpcHQgZnVuY3Rpb25zIGFzIGEgc2xpZGVzaG93XG4gIEBhdXRob3IgTGVhIFZlcm91XG4gIEB2ZXJzaW9uIDEuMFxuICovXG5cbi5zbGlkZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwO1xuICByaWdodDogMDtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICB6LWluZGV4OiAxO1xuICBmb250LXNpemU6IDI1MCU7XG4gIGxpbmUtaGVpZ2h0OiAxLjY7XG4gIG9wYWNpdHk6IDA7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGNvdW50ZXItaW5jcmVtZW50OiBzbGlkZTtcbiAgdHJhbnNpdGlvbjogMXMgb3BhY2l0eTtcbn1cblxuLnNsaWRlOnRhcmdldCB7XG4gIHotaW5kZXg6IDEwMDtcbiAgb3BhY2l0eTogMTtcbiAgaGVpZ2h0OiBhdXRvO1xuICB3aWR0aDogYXV0bztcbiAgb3ZlcmZsb3c6IHZpc2libGU7XG59XG5cbi8qKlxuICBTbGlkZSBudW1iZXJzXG4gKi9cbi5zbGlkZTp0YXJnZXQ6OmJlZm9yZSB7XG4gIGNvbnRlbnQ6IGNvdW50ZXIoc2xpZGUpO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogLjA1aW47XG4gIHJpZ2h0OiAuNWVtO1xuICB6LWluZGV4OiAxMDEwO1xuICBmb250LXNpemU6IC4xNWluO1xuICBjb2xvcjogd2hpdGU7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC4yNSk7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG4gIHRleHQtc2hhZG93OiAwIC4wNWVtIC4xZW0gYmxhY2s7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgcGFkZGluZzogLjFlbSAuM2VtIDA7XG4gIG1pbi13aWR0aDogMS42ZW07XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbn1cblxuLyogSWYgdGhlcmUncyBub3RoaW5nIHNlbGVjdGVkLCBzaG93IHRoZSBmaXJzdCAqL1xuLnNsaWRlOmZpcnN0LWNoaWxkIHtcbiAgei1pbmRleDogMjtcbn1cblxuLyogRGVsYXllZCBpdGVtcyB0aGF0IGFyZSBzaG93biBpbmNyZW1lbnRhbGx5IGFmdGVyIHRoZSBzbGlkZSBpcyAqL1xuLnNsaWRlIC5kZWxheWVkIHtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogLjdzIG9wYWNpdHk7XG59XG5cbi5zbGlkZSAuZGVsYXllZC5kaXNwbGF5ZWQge1xuICBvcGFjaXR5OiAuMztcbn1cblxuLnNsaWRlIC5kZWxheWVkLmN1cnJlbnQsXG4uc2xpZGUgLmRlbGF5ZWQuZGlzcGxheWVkLm5vbi1kaXNtaXNzYWJsZSB7XG4gIG9wYWNpdHk6IDE7XG59XG5cbi5zbGlkZSAuZGlzbWlzc2VkIHtcbiAgb3BhY2l0eTogLjM7XG59XG5cbi8qKlxuICBTaG93IHRodW1ibmFpbHNcbiAqL1xuXG4uc2hvdy10aHVtYm5haWxzIC5zbGlkZSB7XG4gIHdpZHRoOiAxMDI0cHg7XG4gIGhlaWdodDogNzY4cHg7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gIGZsb2F0OiBsZWZ0O1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBwb3NpdGlvbjogc3RhdGljO1xuICBvcGFjaXR5OiAxO1xuICBtYXJnaW46IC0yOTJweCAtMzk1cHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgdHJhbnNmb3JtOiBzY2FsZSgwLjIsIDAuMik7XG4gIHRyYW5zaXRpb246IDFzIHRyYW5zZm9ybTtcbn1cblxuLnNob3ctdGh1bWJuYWlscyAuc2xpZGUgLmRlbGF5ZWQge1xuICBvcGFjaXR5OiAxO1xufVxuXG4uc2hvdy10aHVtYm5haWxzIC5zbGlkZTpob3ZlciB7XG4gIG91dGxpbmU6IDIwcHggc29saWQgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjYpO1xuICAtbW96LW91dGxpbmUtcmFkaXVzOiA1cHg7XG4gIGJveC1zaGFkb3c6IDVweCA1cHggMTBweCBibGFjaztcbn1cblxuLyogTWFyayBzbGlkZXMgYXMgaW5jb21wbGV0ZSB0byBzcG90IHRoZW0gZWFzaWVyICovXG4uaW5jb21wbGV0ZS5zbGlkZTo6YWZ0ZXIge1xuICBjb250ZW50OiAnSU5DT01QTEVURSc7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogNDAlO1xuICBsZWZ0OiAzMCU7XG4gIHBhZGRpbmc6IC4xZW0gLjRlbSAwO1xuICBib3JkZXI6IC4xZW0gc29saWQ7XG4gIGNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC44KTtcbiAgZm9udC1zaXplOiAxNDAlO1xuICBib3JkZXItcmFkaXVzOiAuMmVtO1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgzMGRlZyk7XG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */

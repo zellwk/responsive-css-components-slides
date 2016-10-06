@@ -1,0 +1,22 @@
+{
+  "name": "csss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "classList.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "modularscale-sass": "^2.1.1",
+    "normalize-css": "^2.3.1",
+    "susy": "^2.2.12",
+    "themify": "^1.0.0"
+  }
+}

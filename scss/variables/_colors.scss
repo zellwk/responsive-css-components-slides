@@ -1,0 +1,73 @@
+
+// Colors
+// ======
+// For project colors.
+//
+// Approach:
+// ---------
+// @LandonSchropp's approach of naming color variables.
+// - http://davidwalsh.name/sass-color-variables-dont-suck
+// - http://chir.ag/projects/name-that-color/
+//
+// Usage:
+// ------
+// .test {
+//   background-color: color(shamrock);
+// }
+// ==========
+
+$colors: (
+  dodger: blueviolet,
+  saffron: #FABB00,
+  ulfro: darken(#11D473, 5%),
+  b: #111,
+  w: #fff,
+  intro: #F0F1FF
+  );
+
+$themes: (
+  intro: (
+    color: #111,
+    background: #F0F1FF,
+    ),
+  goodtype: (
+    color: #fff,
+    background: color(ulfro)
+  ),
+  typesetting: (
+    color: #333,
+    background: color(saffron)
+  ),
+  modular-scale: (
+    color: #222,
+    background: #F269D9
+  ),
+  vertical-rhythm: (
+    color: #fff,
+    background: #292339
+  ),
+  msvr: (
+    color: #fff,
+    background: #345055
+  ),
+  break: (
+    color: #fff,
+    background: #111
+  ),
+  rp: (
+    color: #111,
+    background: #C6D5DC
+  ),
+  rms: (
+    color: #333,
+    background: lighten(#5F6C9B, 15%)
+  ),
+  rvr: (
+    color: #333,
+    background: #CF9E6E
+  ),
+  auto: (
+    color: #121212,
+    background: #D05374
+  )
+);

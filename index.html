@@ -124,16 +124,13 @@
 }</code></pre>
 	</div>
 
-	<div class="slide slide--image" style="background-image: url('img/devfest.jpg')"></div>
 
 	<div class="slide">
 		<p data-height="600" data-theme-id="dark" data-slug-hash="tvheK" data-default-tab="html,result" data-user="chriscoyier" data-embed-version="2" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/chriscoyier/pen/tvheK/">Em AND Rem</a> by Chris Coyier (<a href="http://codepen.io/chriscoyier">@chriscoyier</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 		<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 	</div>
 
-	<div class="slide center">
-		<img src="img/yay.gif" alt="">
-	</div>
+	<div class="slide slide--image" style="background-image: url('img/devfest.jpg')"></div>
 
 	<div class="slide center">
 		<h2>How much do we need to scale?</h2>
@@ -183,6 +180,58 @@
 	</div>
 
 	<div class="slide slide--image" style="background-image: url('img/blind-man-elephant.png')"></div>
+
+
+	<div class="slide slide--divider">
+		<h1>Design Principles</h1>
+	</div>
+
+	<div class="slide slide--divider">
+		<h1>Principle of Repetition</h1>
+	</div>
+
+	<div class="slide center">
+		<img src="img/circle-alone.png" alt="">
+	</div>
+
+	<div class="slide center">
+		<img src="img/circle-more.png" alt="">
+	</div>
+
+	<div class="slide center">
+		<img src="img/circle-pattern.png" alt="">
+	</div>
+
+	<div class="slide">
+		<h2>Principle of Repetition</h2>
+		<ul>
+			<li class="delayed non-dismissable">Limit number of font-sizes (and repeat them)</li>
+			<li class="hidden">Consistent whitespace</li>
+		</ul>
+	</div>
+
+	<div class="slide center">
+		<div class="btn" style="font-size: 0.675em">Button</div>
+		<div class="btn" style="font-size: 1em">Larger Button</div>
+	</div>
+
+	<div class="slide slide--image" style="background-image: url('img/mashable.jpg')"></div>
+
+	<div class="slide">
+		<h2>Principle of Repetition</h2>
+		<ul>
+			<li>Limit number of font-sizes (and repeat them)</li>
+			<li class="delayed">Consistent whitespace</li>
+		</ul>
+	</div>
+
+	<div class="slide">
+		<img src="img/baseline-24.png" alt="">
+	</div>
+
+	<div class="slide center">
+		<img src="img/separation-of-72px.png" alt="">
+	</div>
 
 
 	<div class="slide center">
@@ -241,83 +290,32 @@
 		</div>
 	</div>
 
-	<div class="slide slide--divider">
-		<h1>Design Principles</h1>
-	</div>
-
-	<div class="slide slide--divider">
-		<h1>Principle of Repetition</h1>
-	</div>
-
-	<div class="slide center">
-		<img src="img/circle-alone.png" alt="">
-	</div>
-
-	<div class="slide center">
-		<img src="img/circle-more.png" alt="">
-	</div>
-
-	<div class="slide center">
-		<img src="img/circle-pattern.png" alt="">
-	</div>
-
-	<div class="slide">
-		<h2>Principle of Repetition</h2>
-		<ul>
-			<li class="delayed non-dismissable">Limit number of font-sizes (and repeat them)</li>
-			<li class="hidden">Consistent whitespace</li>
-		</ul>
-	</div>
-
-	<div class="slide center">
-		<div class="btn" style="font-size: 0.675em">Button</div>
-		<div class="btn" style="font-size: 1em">Larger Button</div>
-	</div>
-
-	<div class="slide">
-		<h2>Principle of Repetition</h2>
-		<ul>
-			<li>Limit number of font-sizes (and repeat them)</li>
-			<li class="delayed">Consistent whitespace</li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<img src="img/baseline-24.png" alt="">
-	</div>
-
-	<div class="slide center">
-		<img src="img/separation-of-72px.png" alt="">
-	</div>
-
 	<div class="slide slide--image" style="background-image: url('img/mashable.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-area1.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-area2.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-area3.jpg')"></div>
 
-
 	<div class="slide">
 		<h2>Controlled Scaling</h2>
-		<pre><code>.area1 .component {/* styles go here */}
-.area2 .component {/* styles go here */}
-.area3 .component {/* styles go here */}</code></pre>
+		<pre><code>.component--area1 {/* styles go here */}
+.component--area2 {/* styles go here */}
+.component--area3 {/* styles go here */}</code></pre>
 	</div>
 
 	<div class="slide slide--image" style="background-image: url('img/mashable-area3.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-title.jpg')"></div>
-	<div class="slide slide--image" style="background-image: url('img/mashable-category.jpg')"></div>
 
 	<div class="slide">
 		<h2>Controlled Scaling</h2>
-		<pre><code><span class="delayed non-dismissable">.area1 .component__title {
+		<pre><code><span class="delayed non-dismissable">.component--area1 .component__title {
 	font-size: 28px;
 }</span>
 
-<span class="delayed non-dismissable">.area2 .component__title {
+<span class="delayed non-dismissable">.component--area2 .component__title {
 	font-size: 22px;
 }</span>
 
-<span class="delayed non-dismissable">.area3 .component__title {
+<span class="delayed non-dismissable">.component--area3 .component__title {
 	font-size: 14px;
 }</span></code></pre>
 	</div>
@@ -335,17 +333,6 @@
 .area3 .component__title {
 	font-size: .875rem; /* 14px */
 }</code></pre>
-	</div>
-
-<div class="slide">
-	<h2>Controlled Scaling</h2>
-	<pre><code><span class="delayed non-dismissable">.component__category {
-  font-size: .625rem; /* 10px */
-}</span>
-
-<span class="delayed non-dismissable">.area3 .component__category {
-  display: none;
-}</span></code></pre>
 	</div>
 
 	<div class="slide slide--image" style="background-image: url('img/mashable-margin1.jpg')"></div>
@@ -448,8 +435,8 @@ h1 {
 	<div class="slide">
 		<h2>Rem or Em?</h2>
 		<ul>
-			<li class="delayed">Em = Local variable</li>
-			<li class="delayed">Rem = Global variable</li>
+			<li class="delayed non-dismissable">Em = Local variable</li>
+			<li class="delayed non-dismissable">Rem = Global variable</li>
 		</ul>
 	</div>
 
@@ -490,62 +477,11 @@ h1 {
 		</ul>
 	</div>
 
-	<div class="slide center">
-		<div>
-			<img src="img/rem-vs-em/header.png" alt="">
-		</div>
-	</div>
-
 	<div class="slide">
 		<h2>Rem or Em?</h2>
 		<pre><code>.header{
 	font-size: 1rem;
-	padding: 0.5rem 0.75rem;
-}</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Rem or Em?</h2>
-		<pre><code>.header {
-	font-size: 1rem;
-	padding: 0.5rem 0.75rem;
-}
-
-.header--large{
-	font-size: 2rem; /* changed from 1rem */
-}</code></pre>
-	</div>
-
-	<div class="slide center">
-		<div>
-			<img src="img/rem-vs-em/header-large.png" alt="">
-		</div>
-	</div>
-
-	<div class="slide">
-		<h2>Rem or Em?</h2>
-		<pre><code>.header{
-	font-size: 1rem;
-	padding: 0.5rem 0.75rem;
-}
-
-.header--large{
-	font-size: 2rem;
-	padding: 1rem 1.5rem; /* Padding is 2x that of normal */
-}</code></pre>
-	</div>
-
-	<div class="slide center">
-		<div>
-			<img src="img/rem-vs-em/header-large--fixed.png" alt="">
-		</div>
-	</div>
-
-	<div class="slide">
-		<h2>Rem or Em?</h2>
-		<pre><code>.header{
-	font-size: 1rem;
-	padding: 0.5em 0.75em; /* Changed into em */
+	padding: 0.5em 0.75em;
 }
 
 .header--large{
@@ -557,20 +493,6 @@ h1 {
 		<div>
 			<img src="img/rem-vs-em/header-em.png" alt="">
 		</div>
-	</div>
-
-	<div class="slide">
-		<h2>Rem or Em?</h2>
-		<pre><code>.header{
-	font-size: 1rem;
-	padding: 0.5em 0.75em;
-}
-
-.header--large{
-	font-size: 2rem;
-	padding-right: 0.75rem; /* Changed paddings on large headers */
-	padding-left: 0.75rem; /* Changed paddings on large headers */
-}</code></pre>
 	</div>
 
 	<div class="slide">
@@ -590,18 +512,6 @@ h1 {
 
 	<div class="slide">
 		<h2>Rem or Em?</h2>
-		<ul>
-			<li class="delayed non-dismissable">Size in <code>em</code> if the property scales according to its <code>font-size</code></li>
-			<li class="delayed">Size everything else in <code>rem</code>.</li>
-		</ul>
-	</div>
-
-	<div class="slide slide--divider">
-		<h2>But&hellip;</h2>
-	</div>
-
-	<div class="slide">
-		<h2>Rem or Em?</h2>
 		<pre><code>.header {
 	font-size: 1rem;
 	padding: 0.75rem 0.75rem;
@@ -614,33 +524,8 @@ h1 {
 }</code></pre>
 	</div>
 
-	<div class="slide center">
-		<img src="img/yay.gif" alt="">
-	</div>
-
-	<div class="slide slide--divider">
-		<a href="https://imgflip.com/i/1bwj6t"><img src="https://i.imgflip.com/1bwj6t.jpg" title="made at imgflip.com"/></a>
-	</div>
-
 	<div id="bps" class="slide slide--divider">
 		<h1>Breakpoints + Scaling</h1>
-	</div>
-
-	<div class="slide">
-		<div class="s-modular-demo jsControlledScaling has-highlighted-area-1 has-highlighted-area-2 has-highlighted-area-3">
-			<div class="o-mod-demo o-mod-demo--full">
-				<div class="c-demo" data-area="1" data-text="Area 1"></div>
-			</div>
-			<div class="o-mod-demo o-mod-demo--content-sidebar">
-				<div class="o-content c-demo" data-area="2" data-text="Area 2"></div>
-				<div class="o-sidebar c-demo" data-area="3" data-text="Area 3"></div>
-			</div>
-			<div class="o-mod-demo o-mod-demo--three">
-				<div class="o-item c-demo" data-area="3" data-text="Area 3"></div>
-				<div class="o-item c-demo" data-area="3" data-text="Area 3"></div>
-				<div class="o-item c-demo" data-area="3" data-text="Area 3"></div>
-			</div>
-		</div>
 	</div>
 
 	<div class="slide intro">
@@ -663,6 +548,19 @@ h1 {
 	<div class="slide center">
 		<div class="viewport">
 			<div class="viewport__buttons"></div>
+			<div class="s-component component component--scale2">
+				<h3 class="component__title">Today&rsquo; featured picture</h3>
+				<div class="component__body">
+					<img src="img/today-featured.jpg" alt="">
+					<p>The Mystery of the Leaping Fish is a 1916 American short silent film starring Douglas Fairbanks, Bessie Love, and Alma Rubens. Directed by John Emerson, the story – a comedy which focused on "Coke Ennyday", a cocaine-using detective who is a parody of Sherlock Holmes – was written by Tod Browning with intertitles by Anita Loos. A 35 mm print of the film exists in its entirety and is in the public domain.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide center">
+		<div class="viewport">
+			<div class="viewport__buttons"></div>
 			<div class="s-modular-demo eq2 resizable ">
 				<div class="o-content-sidebar">
 					<div class="o-demo--three">
@@ -676,18 +574,6 @@ h1 {
 	</div>
 
 
-	<div class="slide center">
-		<div class="viewport">
-			<div class="viewport__buttons"></div>
-			<div class="s-component component component--scale2">
-				<h3 class="component__title">Today&rsquo; featured picture</h3>
-				<div class="component__body">
-					<img src="img/today-featured.jpg" alt="">
-					<p>The Mystery of the Leaping Fish is a 1916 American short silent film starring Douglas Fairbanks, Bessie Love, and Alma Rubens. Directed by John Emerson, the story – a comedy which focused on "Coke Ennyday", a cocaine-using detective who is a parody of Sherlock Holmes – was written by Tod Browning with intertitles by Anita Loos. A 35 mm print of the film exists in its entirety and is in the public domain.</p>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<div class="slide intro">
 		<h2>Breakpoints + Scaling</h2>
@@ -952,7 +838,7 @@ h1 {
 	</div>
 
 	<div id="element-queries" class="slide center">
-		<h2>Element queries!</h2>
+		<h2>Element Queries!</h2>
 	</div>
 
 	<div class="slide center">
@@ -989,8 +875,28 @@ h1 {
 </code></pre>
 	</div>
 
+
+	<div class="slide">
+		<h2>Modular Scaling—Element Queries</h2>
+		<pre><code>.demo-comp {
+	/* small styles */
+}
+
+.demo-comp[min-width~='<span class="green">500px</span>'] {
+	/* medium styles */
+}
+
+.demo-comp[min-width~='<span class="green">1000px</span>'] {
+	/* large styles */
+}</code></pre>
+	</div>
+
 	<div class="slide center">
 		<h2>But it&rsquo;s not valid CSS yet&hellip;</h2>
+	</div>
+
+	<div class="slide center">
+		<img src="img/nope.jpg" alt="">
 	</div>
 
 	<div class="slide">
@@ -1024,11 +930,11 @@ h1 {
 	/* small styles */
 }
 
-.demo-comp[min-width~='700px'] {
+.demo-comp[min-width~='500px'] {
 	/* medium styles */
 }
 
-.demo-comp[min-width~='1200px'] {
+.demo-comp[min-width~='1000px'] {
 	/* large styles */
 }</code></pre>
 	</div>

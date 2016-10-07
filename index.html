@@ -68,13 +68,28 @@
 	</div>
 
 	<div class="slide intro	">
-		<h2>Modular Components</h2>
+		<h2>Modularity</h2>
 		<ul>
 			<li class="delayed non-dismissable">Markup structure</li>
 			<li class="delayed non-dismissable">CSS Selectors</li>
 			<li class="delayed non-dismissable">Naming convention</li>
 			<li class="delayed non-dismissable">DRY</li>
 		</ul>
+	</div>
+
+	<div class="slide">
+		<h2>Modularity</h2>
+		<ul>
+			<li class="delayed non-dismissable"><a href="http://atomicdesign.bradfrost.com">Atomic Design</a> by Brad Frost</li>
+			<li class="delayed non-dismissable"><a href="https://en.bem.info/methodology/">BEM</a> by Yandex</li>
+			<li class="delayed non-dismissable"><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">Namespacing</a> by Harry Roberts</li>
+			<li class="delayed non-dismissable"><a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a> by Nicole Sullivan</li>
+			<li class="delayed non-dismissable"><a href="https://smacss.com">SMACSS</a> by Jonathan Snook</li>
+		</ul>
+	</div>
+
+	<div class="slide center">
+		<h2>Communicate with your team!</h2>
 	</div>
 
 	<div class="slide slide--divider ">
@@ -90,7 +105,89 @@
 
 	<div class="slide center">
 		<div class="s-component component component--scale1">
-			<h3 class="component__title">Today&rsquo; featured picture</h3>
+			<h3 class="component__title">Today&rsquo;s featured article</h3>
+			<div class="component__body">
+				<p>The Mystery of the Leaping Fish is a 1916 American short silent film starring Douglas Fairbanks, Bessie Love, and Alma Rubens. Directed by John Emerson, the story – a comedy which focused on "Coke Ennyday", a cocaine-using detective who is a parody of Sherlock Holmes – was written by Tod Browning with intertitles by Anita Loos. A 35 mm print of the film exists in its entirety and is in the public domain.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide">
+		<h2>Scaling</h2>
+		<pre><code>.parent-component {
+	font-size: 1.5rem; // or vw
+}
+
+.component {
+  font-size: 1em;
+  margin: 1em;
+}</code></pre>
+	</div>
+
+	<div class="slide slide--image" style="background-image: url('img/devfest.jpg')"></div>
+
+	<div class="slide">
+		<p data-height="600" data-theme-id="dark" data-slug-hash="tvheK" data-default-tab="html,result" data-user="chriscoyier" data-embed-version="2" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/chriscoyier/pen/tvheK/">Em AND Rem</a> by Chris Coyier (<a href="http://codepen.io/chriscoyier">@chriscoyier</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+		<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</div>
+
+	<div class="slide center">
+		<img src="img/yay.gif" alt="">
+	</div>
+
+	<div class="slide center">
+		<h2>How much do we need to scale?</h2>
+	</div>
+
+	<div class="slide slide--image" style="background-image: url('img/buzz-lightyear.jpg')"></div>
+
+	<div class="slide">
+		<div class="btn" style="font-size: 0.25em;">Button</div>
+		<div class="btn" style="font-size: 0.375em;">Button</div>
+		<div class="btn" style="font-size: 0.5em;">Button</div>
+		<div class="btn" style="font-size: 0.625em;">Button</div>
+		<div class="btn" style="font-size: 0.75em;">Button</div>
+		<div class="btn" style="font-size: 0.875em;">Button</div>
+		<div class="btn" style="font-size: 1em;">Button</div>
+		<div class="btn" style="font-size: 1.125em;">Button</div>
+		<div class="btn" style="font-size: 1.25em;">Button</div>
+		<div class="btn" style="font-size: 1.375em;">Button</div>
+		<div class="btn" style="font-size: 1.5em">Button</div>
+		<div class="btn" style="font-size: 1.625em">Button</div>
+		<div class="btn" style="font-size: 1.75em">Button</div>
+		<div class="btn" style="font-size: 1.875em">Button</div>
+		<div class="btn" style="font-size: 2em">Button</div>
+		<div class="btn" style="font-size: 2.125em">Button</div>
+		<div class="btn" style="font-size: 2.25em">Button</div>
+		<div class="btn" style="font-size: 2.375em">Button</div>
+	</div>
+
+	<div class="slide intro">
+		<div class="s-modular-demo">
+			<div class="o-mod-demo o-mod-demo--three">
+				<div class="o-item c-demo dismissed" data-text="Component"></div>
+				<div class="o-item c-demo dismissed" data-text="Component"></div>
+				<div class="o-item c-demo dismissed" data-text="Component"></div>
+			</div>
+			<div class="o-mod-demo o-mod-demo--three">
+				<div class="o-item c-demo dismissed" data-text="Component"></div>
+				<div class="o-item c-demo is-highlighted" data-text="Component"></div>
+				<div class="o-item c-demo dismissed" data-text="Component"></div>
+			</div>
+			<div class="o-mod-demo o-mod-demo--three">
+				<div class="o-item c-demo dismissed" data-text="Component"></div>
+				<div class="o-item c-demo dismissed" data-text="Component"></div>
+				<div class="o-item c-demo dismissed" data-text="Component"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide slide--image" style="background-image: url('img/blind-man-elephant.png')"></div>
+
+
+	<div class="slide center">
+		<div class="s-component component component--scale1">
+			<h3 class="component__title">Today&rsquo;s featured article</h3>
 			<div class="component__body">
 				<p>The Mystery of the Leaping Fish is a 1916 American short silent film starring Douglas Fairbanks, Bessie Love, and Alma Rubens. Directed by John Emerson, the story – a comedy which focused on "Coke Ennyday", a cocaine-using detective who is a parody of Sherlock Holmes – was written by Tod Browning with intertitles by Anita Loos. A 35 mm print of the film exists in its entirety and is in the public domain.</p>
 			</div>
@@ -127,107 +224,6 @@
 		</div>
 	</div>
 
-	<div class="slide">
-		<h2>Scalability</h2>
-		<ul>
-			<li>Visual styles</li>
-			<li>CSS Properties</li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<h2>Modular vs Scalable</h2>
-		<ul>
-			<li class="delayed non-dismissable">
-				Modular
-				<ul>
-					<li class="delayed non-dismissable"><strong>Purpose</strong>: Allow code reuse with minimal changes</li>
-					<li class="delayed non-dismissable"><strong>What we look at</strong>: Markup structure &amp; selectors</li>
-				</ul>
-			</li>
-			<li class="delayed non-dismissable">
-				Scalable
-				<ul>
-					<li class="delayed non-dismissable"><strong>Purpose</strong>: Ensures component looks good anywhere, anytime</li>
-					<li class="delayed non-dismissable"><strong>What we look at</strong>: Visuals &amp; CSS properties</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-
-	<div id="scaling-methods" class="slide slide--divider">
-		<h1>Scaling Methods</h1>
-	</div>
-
-	<div class="slide">
-		<h2>Scaling Methods</h2>
-		<ul>
-			<li class="delayed">Proportional Scaling</li>
-			<li class="delayed">Controlled Scaling</li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<h2>Proportional Scaling</h2>
-		<ul>
-			<li class="delayed non-dismissable">For images</li>
-		</ul>
-		<pre class="delayed lang-scss"><code>img {
-	max-width: 100%;
-	height: auto;
-}</code></pre>
-	</div>
-
-	<div class="slide center">
-		<div class="s-demo-image">
-			<img src="http://lorempixel.com/600/300" alt="">
-		</div>
-	</div>
-
-	<div class="slide">
-		<h2>Proportional Scaling</h2>
-		<ul>
-			<li class="dismissed">For images</li>
-			<li class="delayed non-dismissable">For SVGs</li>
-		</ul>
-		<pre class="delayed lang-xml non-dismissable"><code>&lt;svg viewBox="0 0 100 100"&gt;</code></pre>
-		<pre class="delayed lang-scss non-dismissable"><code>svg {
-	width: 100%;
-	height: auto;
-}</code></pre>
-	</div>
-
-	<div class="slide center">
-		<div class="s-demo-svg">
-			<svg viewBox="0 0 327 280"><use xlink:href="svg/unicorn.svg#unicorn" /></svg>
-		</div>
-		<p class="small">http://clipartist.net/svg/toy-unicorn-scalable-vector-graphics-svg/</p>
-	</div>
-
-	<div class="slide">
-		<h2>Proportional Scaling</h2>
-		<ul>
-			<li class="dismissed">For images</li>
-			<li class="dismissed">For SVGs</li>
-			<li class="delayed">For Text and other CSS Properties</li>
-		</ul>
-		<pre class="delayed lang-scss non-dismissable"><code>.parent-component {
-	font-size: 1.5rem; // Or vw
-}
-
-.component {
-  font-size: 1em;
-  margin: 1em;
-}</code></pre>
-	</div>
-
-	<div class="slide">
-		<p data-height="600" data-theme-id="dark" data-slug-hash="tvheK" data-default-tab="html,result" data-user="chriscoyier" data-embed-version="2" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/chriscoyier/pen/tvheK/">Em AND Rem</a> by Chris Coyier (<a href="http://codepen.io/chriscoyier">@chriscoyier</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-		<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-	</div>
-
-	<div class="slide slide--image" style="background-image: url('img/devfest.jpg')"></div>
-
 	<div class="slide intro">
 		<div class="s-modular-demo jsControlledScaling">
 			<div class="o-mod-demo o-mod-demo--full">
@@ -245,10 +241,60 @@
 		</div>
 	</div>
 
+	<div class="slide slide--divider">
+		<h1>Design Principles</h1>
+	</div>
+
+	<div class="slide slide--divider">
+		<h1>Principle of Repetition</h1>
+	</div>
+
+	<div class="slide center">
+		<img src="img/circle-alone.png" alt="">
+	</div>
+
+	<div class="slide center">
+		<img src="img/circle-more.png" alt="">
+	</div>
+
+	<div class="slide center">
+		<img src="img/circle-pattern.png" alt="">
+	</div>
+
+	<div class="slide">
+		<h2>Principle of Repetition</h2>
+		<ul>
+			<li class="delayed non-dismissable">Limit number of font-sizes (and repeat them)</li>
+			<li class="hidden">Consistent whitespace</li>
+		</ul>
+	</div>
+
+	<div class="slide center">
+		<div class="btn" style="font-size: 0.675em">Button</div>
+		<div class="btn" style="font-size: 1em">Larger Button</div>
+	</div>
+
+	<div class="slide">
+		<h2>Principle of Repetition</h2>
+		<ul>
+			<li>Limit number of font-sizes (and repeat them)</li>
+			<li class="delayed">Consistent whitespace</li>
+		</ul>
+	</div>
+
+	<div class="slide">
+		<img src="img/baseline-24.png" alt="">
+	</div>
+
+	<div class="slide center">
+		<img src="img/separation-of-72px.png" alt="">
+	</div>
+
 	<div class="slide slide--image" style="background-image: url('img/mashable.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-area1.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-area2.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-area3.jpg')"></div>
+
 
 	<div class="slide">
 		<h2>Controlled Scaling</h2>
@@ -302,7 +348,6 @@
 }</span></code></pre>
 	</div>
 
-
 	<div class="slide slide--image" style="background-image: url('img/mashable-margin1.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-margin2.jpg')"></div>
 	<div class="slide slide--image" style="background-image: url('img/mashable-margin3.jpg')"></div>
@@ -341,8 +386,12 @@
 </code></pre>
 	</div>
 
+	<div class="slide center">
+		<a href="https://imgflip.com/i/1bwhpu"><img src="https://i.imgflip.com/1bwhpu.jpg" title="made at imgflip.com"/></a>
+	</div>
+
 	<div class="slide slide--divider">
-		<h1>Rem vs Em<pan class="delayed">?</pan></h1>
+		<h1>Rem vs Em</h1>
 	</div>
 
 	<div class="slide slide--quote center">
@@ -394,6 +443,43 @@ h1 {
 
 	<div class="slide slide--divider">
 		<h1>Rem or Em?</h1>
+	</div>
+
+	<div class="slide">
+		<h2>Rem or Em?</h2>
+		<ul>
+			<li class="delayed">Em = Local variable</li>
+			<li class="delayed">Rem = Global variable</li>
+		</ul>
+	</div>
+
+	<div class="slide slide--divider">
+		<h1 class="c-green">Local Var = Good</h1>
+	</div>
+
+	<div class="slide slide--divider">
+		<h1 class="c-red">Global var = Bad</h1>
+	</div>
+
+	<div class="slide">
+		<div class="btn" style="font-size: 0.25em;">Button</div>
+		<div class="btn" style="font-size: 0.375em;">Button</div>
+		<div class="btn" style="font-size: 0.5em;">Button</div>
+		<div class="btn" style="font-size: 0.625em;">Button</div>
+		<div class="btn" style="font-size: 0.75em;">Button</div>
+		<div class="btn" style="font-size: 0.875em;">Button</div>
+		<div class="btn" style="font-size: 1em;">Button</div>
+		<div class="btn" style="font-size: 1.125em;">Button</div>
+		<div class="btn" style="font-size: 1.25em;">Button</div>
+		<div class="btn" style="font-size: 1.375em;">Button</div>
+		<div class="btn" style="font-size: 1.5em">Button</div>
+		<div class="btn" style="font-size: 1.625em">Button</div>
+		<div class="btn" style="font-size: 1.75em">Button</div>
+		<div class="btn" style="font-size: 1.875em">Button</div>
+		<div class="btn" style="font-size: 2em">Button</div>
+		<div class="btn" style="font-size: 2.125em">Button</div>
+		<div class="btn" style="font-size: 2.25em">Button</div>
+		<div class="btn" style="font-size: 2.375em">Button</div>
 	</div>
 
 	<div class="slide">
@@ -514,23 +600,26 @@ h1 {
 		<h2>But&hellip;</h2>
 	</div>
 
-	<div class="slide center">
-		<div>
-			<img style="max-width: 75%" src="img/rem-vs-em/header-relationship.png" alt="">
-		</div>
-	</div>
-
 	<div class="slide">
 		<h2>Rem or Em?</h2>
-		<pre><code>.header{
+		<pre><code>.header {
 	font-size: 1rem;
 	padding: 0.75rem 0.75rem;
 }
 
-.header--large{
+.header--large {
 	font-size: 2rem;
+	// Correcting for Vertical Rhythm
 	padding: 1.25rem 0.75rem;
 }</code></pre>
+	</div>
+
+	<div class="slide center">
+		<img src="img/yay.gif" alt="">
+	</div>
+
+	<div class="slide slide--divider">
+		<a href="https://imgflip.com/i/1bwj6t"><img src="https://i.imgflip.com/1bwj6t.jpg" title="made at imgflip.com"/></a>
 	</div>
 
 	<div id="bps" class="slide slide--divider">
@@ -586,6 +675,20 @@ h1 {
 		</div>
 	</div>
 
+
+	<div class="slide center">
+		<div class="viewport">
+			<div class="viewport__buttons"></div>
+			<div class="s-component component component--scale2">
+				<h3 class="component__title">Today&rsquo; featured picture</h3>
+				<div class="component__body">
+					<img src="img/today-featured.jpg" alt="">
+					<p>The Mystery of the Leaping Fish is a 1916 American short silent film starring Douglas Fairbanks, Bessie Love, and Alma Rubens. Directed by John Emerson, the story – a comedy which focused on "Coke Ennyday", a cocaine-using detective who is a parody of Sherlock Holmes – was written by Tod Browning with intertitles by Anita Loos. A 35 mm print of the film exists in its entirety and is in the public domain.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="slide intro">
 		<h2>Breakpoints + Scaling</h2>
 		<ul>
@@ -616,7 +719,7 @@ h1 {
 
 	<div class="slide">
 		<h2>Breakpoints + Scaling</h2>
-		<pre><code>.area3 .component {
+		<pre><code>.demo-comp--area3 {
 	// small styles
 	@media (min-width: 700px) and (max-width: 800px) {
     // medium styles
@@ -666,14 +769,13 @@ h1 {
 
 	<div class="slide">
 		<h2>Breakpoints + Scaling</h2>
-		<pre><code>.area2 .component {
+		<pre><code>.demo-comp--area2 {
 	// small styles
 	@media (min-width: 700px) {
     // medium styles
 	}
 }</code></pre>
 	</div>
-
 
 	<div class="slide center">
 		<div class="viewport">
@@ -720,7 +822,7 @@ h1 {
 
 	<div class="slide">
 		<h2>Breakpoints + Scaling</h2>
-		<pre><code>.area1 .component {
+		<pre><code>.demo-comp--area1 {
 	// small styles
 	@media (min-width: 700px) {
     // medium styles
@@ -733,17 +835,17 @@ h1 {
 
 	<div class="slide">
 		<h2>Breakpoints + Scaling</h2>
-		<pre><code>.area3 .component {
+		<pre><code>.demo-comp--area3 {
 	// small styles
 	@media (min-width: 700px) and (max-width: 800px) { /* medium styles */ }
 }
 
-.area2 .component {
+.demo-comp--area2 {
 	// small styles
 	@media (min-width: 700px) { /* medium styles */ }
 }
 
-.area1 .component {
+.demo-comp--area1 {
 	// small styles
 	@media (min-width: 700px) { /* medium styles */ }
 	@media (min-width: 1200px) { /* large styles */ }
@@ -751,26 +853,26 @@ h1 {
 	</div>
 
 	<div class="slide center">
-		<a href="https://imgflip.com/i/1bihg7"><img src="https://i.imgflip.com/1bihg7.jpg" title="made at imgflip.com"/></a>
+		<a href="https://imgflip.com/i/1bwjgu"><img src="https://i.imgflip.com/1bwjgu.jpg" title="made at imgflip.com"/></a>
 	</div>
 
 	<div id="modular-css" class="slide slide--divider">
-		<h1>Modular Scaling</h1>
+		<h1>Modularity while scaling</h1>
 	</div>
 
 	<div class="slide">
 		<h2>Modular Scaling</h2>
-		<pre><code>.area3 .component {
+		<pre><code>.demo-comp--area3 {
 	<span class="green">// small styles</span>
 	@media (min-width: 700px) and (max-width: 800px) { /* medium styles */ }
 }
 
-.area2 .component {
+.demo-comp--area2 {
 	<span class="green">// small styles</span>
 	@media (min-width: 700px) { /* medium styles */ }
 }
 
-.area1 .component {
+.demo-comp--area1 {
 	<span class="green">// small styles</span>
 	@media (min-width: 700px) { /* medium styles */ }
 	@media (min-width: 1200px) { /* large styles */ }
@@ -779,17 +881,17 @@ h1 {
 
 	<div class="slide">
 		<h2>Modular Scaling</h2>
-		<pre><code><span class="delayed">.component { /* small styles */ }</span>
+		<pre><code><span class="delayed">.demo-comp { /* small styles */ }</span>
 
-<span class="delayed">.area3 .component {
+<span class="delayed">.demo-comp--area3 {
 	@media (min-width: 700px) and (max-width: 800px) { /* medium styles */ }
 }
 
-.area2 .component {
+.demo-comp--area2 {
 	@media (min-width: 700px) { /* medium styles */ }
 }
 
-.area1 .component {
+.demo-comp--area1 {
 	@media (min-width: 700px) { /* medium styles */ }
 	@media (min-width: 1200px) { /* large styles */ }
 }</span></code></pre>
@@ -797,17 +899,17 @@ h1 {
 
 	<div class="slide">
 		<h2>Modular Scaling</h2>
-		<pre><code><span class="dismissed">.component { /* small styles */ }</span>
+		<pre><code><span class="dismissed">.demo-comp { /* small styles */ }</span>
 
-.area3 .component {
+.demo-comp--area3 {
 	@media <span class="orange">(min-width: 700px) </span>and (max-width: 800px) { /* medium styles */ }
 }
 
-.area2 .component {
+.demo-comp--area2 {
 	<span class="orange">@media (min-width: 700px) { /* medium styles */ }</span>
 }
 
-.area1 .component {
+.demo-comp--area1 {
 	<span class="orange">@media (min-width: 700px) { /* medium styles */ }</span>
   @media (min-width: 1200px) { /* large styles */ }
 }</code></pre>
@@ -815,32 +917,32 @@ h1 {
 
 	<div class="slide">
 		<h2>Modular Scaling</h2>
-		<pre><code><span class="delayed non-dismissable">.component {
+		<pre><code><span class="delayed non-dismissable">.demo-comp {
 	/* small styles */
 	@media (min-width: 700px) { /* medium styles */ }
 }</span>
 
-<span class="delayed non-dismissable">.area3 .component {
+<span class="delayed non-dismissable">.demo-comp--area3 {
 	@media (min-width: 800px) { /* small styles */ }
 }
 
-<span class="delayed non-dismissable">.area1 .component {
+<span class="delayed non-dismissable">.demo-comp--area1 {
 	@media (min-width: 1200px) { /* large styles */ }
 }</span></code></pre>
 	</div>
 
 	<div class="slide">
 		<h2>Modular Scaling</h2>
-		<pre><code>.component {
+		<pre><code>.demo-comp {
 	<span class="red">/* small styles */</span>
 	@media (min-width: 700px) { /* medium styles */ }
 }
 
-.area3 .component {
+.demo-comp--area3 {
 	@media (min-width: 800px) { <span class="red">/* small styles */</span> }
 }
 
-.area1 .component {
+.demo-comp--area1 {
 	@media (min-width: 1200px) { /* large styles */ }
 }</code></pre>
 	</div>
@@ -850,7 +952,7 @@ h1 {
 	</div>
 
 	<div id="element-queries" class="slide center">
-		<h2>Element queries to the rescue</h2>
+		<h2>Element queries!</h2>
 	</div>
 
 	<div class="slide center">
@@ -873,15 +975,15 @@ h1 {
 
 	<div class="slide">
 		<h2>Modular Scaling—Element Queries</h2>
-		<pre><code><span class="delayed non-dismissable">.component {
+		<pre><code><span class="delayed non-dismissable">.demo-comp {
 	/* small styles */
 }</span>
 
-<span class="delayed non-dismissable">.component[min-width~='700px'] {
+<span class="delayed non-dismissable">.demo-comp[min-width~='700px'] {
 	/* medium styles */
 }</span>
 
-<span class="delayed non-dismissable">.component[min-width~='1200px'] {
+<span class="delayed non-dismissable">.demo-comp[min-width~='1200px'] {
 	/* large styles */
 }</span>
 </code></pre>
@@ -902,20 +1004,31 @@ h1 {
 	</div>
 
 	<div class="slide center">
+		<h2>And it&rsquo;s not a bed of roses</h2>
+	</div>
+
+	<div class="slide slide--image" style="background-image: url('img/mashable-smaller.jpg')"></div>
+	<div class="slide slide--image" style="background-image: url('img/mashable-small-widths.png')"></div>
+
+	<div class="slide center">
+		<h1>¯\_(ツ)_/¯</h1>
+	</div>
+
+	<div class="slide center">
 		<h2>What&rsquo;s the CSS alternative?</h2>
 	</div>
 
 	<div class="slide">
 		<h2>Modular Scaling</h2>
-		<pre><code>.component {
+		<pre><code>.demo-comp {
 	/* small styles */
 }
 
-.component[min-width~='700px'] {
+.demo-comp[min-width~='700px'] {
 	/* medium styles */
 }
 
-.component[min-width~='1200px'] {
+.demo-comp[min-width~='1200px'] {
 	/* large styles */
 }</code></pre>
 	</div>
@@ -938,17 +1051,17 @@ h1 {
 
 	<div class="slide">
 		<h2>Modular Scaling</h2>
-		<pre><code class="lang-scss"><span class="delayed non-dismissable">.component {
+		<pre><code class="lang-scss"><span class="delayed non-dismissable">.demo-comp {
 	@include component-base;
 	@include component-small;
 	@media (min-width: 700px) { @include component-medium; }
 }</span>
 
-<span class="delayed non-dismissable">.area1 .component {
+<span class="delayed non-dismissable">.demo-comp--area1 {
 	@media (min-width: 1200px) { @include component-large; }
 }</span>
 
-<span class="delayed non-dismissable">.area3 .component {
+<span class="delayed non-dismissable">.demo-comp--area3 {
 	@media (min-width: 800px) { @include component-small; }
 }</span>
 </code></pre>
@@ -965,275 +1078,6 @@ h1 {
 			<li class="delayed">Handle complex variations with mixins or element queries</li>
 			<li class="delayed"><strong>Don't over engineer</strong></li>
 		</ul>
-	</div>
-
-	<div id="modular-markup" class="slide center">
-		<h1>Modular Markup</h1>
-	</div>
-
-	<div class="slide">
-		<h2>Modular Markup</h2>
-		<ul>
-			<li class="delayed"><a href="http://atomicdesign.bradfrost.com">Atomic Design</a> by Brad Frost</li>
-			<li class="delayed"><a href="https://en.bem.info/methodology/">BEM</a> by Yandex</li>
-			<li class="delayed"><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">Namespacing</a> by Harry Roberts</li>
-			<li class="delayed"><a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a> by Nicole Sullivan</li>
-			<li class="delayed"><a href="https://smacss.com">SMACSS</a> by Jonathan Snook</li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<h2>Modular Markup</h2>
-		<ul>
-			<li>Naming Grids</li>
-			<li>Component Structure</li>
-			<li></li>
-		</ul>
-	</div>
-
-	<div class="slide center">
-		<h2>Naming Grids</h2>
-	</div>
-
-	<div class="slide">
-		<h2>Naming Grids</h2>
-		<ul>
-			<li class="delayed">Concise</li>
-			<li class="delayed">Specific</li>
-			<li class="delayed">Descriptive</li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<h2>Naming Grids</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;l-wrap&quot;&gt;
-  <span class="delayed non-dismissable">&lt;div class=&quot;l-content-sidebar&quot;&gt;
-    <span class="delayed non-dismissable">&lt;div class=&quot;l-content-sidebar__content&quot;&gt;
-    	&lt;!-- component--&gt;
-    &lt;/div&gt;</span>
-    <span class="delayed non-dismissable">&lt;div class=&quot;l-content-sidebar__sidebar&quot;&gt;
-    	&lt;!-- component--&gt;
-    &lt;/div&gt;</span>
-  &lt;/div&gt;</span>
-&lt;/div&gt;</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Naming Grids</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;l-wrap&quot;&gt;
-  <span class="delayed non-dismissable">&lt;div class=&quot;l-3grid&quot;&gt;
-    <span class="delayed non-dismissable">&lt;div class=&quot;l-3grid__gi&quot;&gt;
-    	&lt;!-- component--&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;l-3grid__gi&quot;&gt;
-    	&lt;!-- component--&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;l-3grid__gi&quot;&gt;
-    	&lt;!-- component--&gt;
-    &lt;/div&gt;</span>
-  &lt;/div&gt;</span>
-&lt;/div&gt;</code></pre>
-	</div>
-
-	<div class="slide center">
-		<h2>Component Structure</h2>
-	</div>
-
-	<div class="slide">
-		<h2>Component Structure – General Structure</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;l-content-sidebar__sidebar&quot;&gt;
-	<span class="delayed non-dismissable">&lt;div class=&quot;component&quot;&gt;
-	  <span class="delayed">&lt;header class=&quot;component__header&quot;&gt;&lt;/header&gt;</span>
-	  <span class="delayed">&lt;div class=&quot;component__content&quot;&gt;&lt;/div&gt;</span>
-	  <span class="delayed">&lt;footer class=&quot;component__footer&quot;&gt;&lt;/footer&gt;</span>
-	&lt;/div&gt;</span>
-&lt;/div&gt;</span></code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Component Structure – General Structure</h2>
-		<pre><code class="lang-xml">&lt;!-- Full-width-component --&gt;
-&lt;div class=&quot;component__container&quot;&gt;
-  <span class="delayed non-dismissable">&lt;div class=&quot;wrap&quot;&gt;
-    <span class="delayed non-dismissable">&lt;div class=&quot;component&quot;&gt;
-      <span class="delayed non-dismissable">&lt;header class=&quot;component__header&quot;&gt;&lt;/header&gt;
-      &lt;div class=&quot;component__content&quot;&gt;&lt;/div&gt;
-      &lt;footer class=&quot;component__footer&quot;&gt;&lt;/footer&gt;</span>
-    &lt;/div&gt;</span>
-  &lt;/div&gt;</span>
-&lt;/div&gt;</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Component Structure – Elements for everything</h2>
-		<pre><code class="xml">&lt;div class=&quot;component&quot;&gt;
-  <span class="delayed non-dismissable">&lt;header class=&quot;component__header&quot;&gt;
-    <span class="delayed non-dismissable">&lt;h1 class=&quot;component__title&quot;&gt;&lt;/h1&gt;</span>
-  &lt;/header&gt;</span>
-&lt;/div&gt;</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Component Structure – Elements for everything</h2>
-		<pre><code><span class="delayed">.component__header { /* header styles */}</span>
-<span class="delayed">.component__title { /* title styles */ }</span></code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Component Structure – Modifiers on component</h2>
-		<pre><code class="xml">&lt;div class=&quot;component <span class="delayed">component--modifier</span>&quot;&gt;
-  &lt;header class=&quot;component__header&quot;&gt;
-    &lt;h1 class=&quot;component__title&quot;&gt;&lt;/h1&gt;
-  &lt;/header&gt;
-&lt;/div&gt;</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Component Structure – Modifiers on component</h2>
-		<pre><code><span class="delayed">.component--modifier .component__header {
-	/* Modified header styles */
-}</span>
-
-<span class="delayed">.component--modifier .component__title {
-  /* Modified title styles */
-}</span></code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Component Structure – Modifiers on component</h2>
-		<pre><code class="lang-scss">.component {
-	@include component-base;
-	@include component-small;
-	@media (min-width: 700px) { @include component-medium; }
-}
-
-<span class="red">.area1 .component</span> {
-	@media (min-width: 1200px) { @include component-large; }
-}
-
-<span class="red">.area3 .component</span> {
-	@media (min-width: 800px) { @include component-small; }
-}
-</code></pre>
-	</div>
-
-
-	<div class="slide">
-		<h2>Component Structure – Modifiers on component</h2>
-		<pre><code class="lang-xml"><span class="delayed non-dismissable">&lt;div class="component"&gt;&lt;/div&gt;</span>
-<span class="delayed non-dismissable">&lt;div class="component component--variation1"&gt;&lt;/div&gt;</span>
-<span class="delayed non-dismissable">&lt;div class="component component--variation3"&gt;&lt;/div&gt;</span>
-</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Component Structure – Modifiers on component</h2>
-		<pre><code class="lang-scss">.component {
-	@include component-base;
-	@include component-small;
-	@media (min-width: 700px) { @include component-medium; }
-}
-
-<span class="green">.component--variation1</span> {
-	@media (min-width: 1200px) { @include component-large; }
-}
-
-<span class="green">.component--variation3</span> {
-	@media (min-width: 800px) { @include component-small; }
-}
-</code></pre>
-	</div>
-
-
-	<div class="slide center">
-		<h2>OOCSS</h2>
-	</div>
-
-	<div class="slide center">
-		<h2>Modularity within components</h2>
-	</div>
-
-	<div class="slide">
-		<h2>OOCSS</h2>
-		<pre><code class="xml">&lt;h1 class=&quot;component__title&quot;&gt;&lt;/h1&gt;</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>OOCSS</h2>
-		<pre><code class="xml">&lt;<span class="orange">h1</span> class=&quot;component__title&quot;&gt;<span class="orange">&lt;/h1&gt;</span></code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>OOCSS</h2>
-		<pre><code class="xml">&lt;h1 class=&quot;<span class="orange">component__title</span>&quot;&gt;&lt;/h2&gt;</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>OOCSS</h2>
-		<pre><code class="xml">&lt;h2 class=&quot;<span class="delayed orange">h1</span> component__title&quot;&gt;&lt;/h2&gt;</code></pre>
-	</div>
-
-	<div class="slide center">
-		<h2>Namespacing</h2>
-	</div>
-
-	<div class="slide center">
-		<h2>Provide Clarity</h2>
-	</div>
-
-	<div class="slide">
-		<h2>Namespacing – Objects and Components</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;o-form c-login-form jsLoginForm&quot;&gt;&lt;/div&gt;</code></pre>
-	</div>
-
-	<div class="slide">
-		<h2>Namespacing – Objects and Components</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;<span class="red">o-form</span> c-login-form&quot;&gt;&lt;/div&gt;</code></pre>
-
-		<ul>
-			<li><code>o-</code>: Object. Reusable</li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<h2>Namespacing – Objects and Components</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;o-form <span class="green">c-login-form</span>&quot;&gt;&lt;/div&gt;</code></pre>
-
-		<ul>
-			<li class="dismissed"><code>o-</code>: Object. Reusable</li>
-			<li><code>c-</code>: Component. Only one instance</li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<h2>Namespacing - Layouts</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;l-content-sidebar&quot;&gt;</code></pre>
-		<ul>
-			<li><code>l-</code> layouts</li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<h2>Namespacing - States</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;component <span class="orange">is-active</span> <span class="orange">has-activated</span>&quot;&gt;</code></pre>
-		<ul>
-			<li><code>is-</code></li>
-			<li><code>has-</code></li>
-		</ul>
-	</div>
-
-	<div class="slide">
-		<h2>Namespacing - JavScript</h2>
-		<pre><code class="lang-xml">&lt;div class=&quot;component <span class="orange">jsComponent</span>&quot;&gt;</code></pre>
-		<ul>
-			<li><code>js</code>: Javascript related.</li>
-		</ul>
-	</div>
-
-	<div class="slide center">
-		<h1>Create a structure</h1>
-		<h2>&amp;</h2>
-		<h1>Use it consistently</h1>
 	</div>
 
 	<div class="slide center">

@@ -20,7 +20,7 @@ function shuffle (array) {
 const TM = TweenMax
 const modularGrids = Array.from(document.querySelectorAll('.jsModularDemo'))
 const componentDiv = document.createElement('div')
-componentDiv.innerHTML = 'component'
+componentDiv.innerHTML = 'Component'
 componentDiv.classList.add('component')
 componentDiv.style.display = 'flex'
 componentDiv.style.alignItems = 'center'
@@ -70,51 +70,15 @@ modularGrids.forEach(grid => {
 
 // Component Scaling 2
 // ==========
-const scale2 = document.querySelector('.component--scale2')
-scale2.addEventListener('click', e => {
-  let p = scale2.querySelector('.component__body').querySelector('p')
+const scale2 = document.querySelectorAll('.component--scale2')
+scale2.forEach(el => el.addEventListener('click', e => {
+  let p = el.querySelector('.component__body').querySelector('p')
   let tween = new TimelineMax({ease: Power0.easeNone})
   tween.to(p, 3, {maxWidth: 600})
   setTimeout(function () {
-    scale2.classList.add('is-scaled')
+    el.classList.add('is-scaled')
   }, 1000)
-})
-
-// Proportional Scaling (Image)
-// ===========
-const imgContainer = document.querySelector('.s-demo-image')
-imgContainer.addEventListener('click', e => {
-  e.stopPropagation()
-  let tween = new TimelineMax()
-  tween.to(imgContainer, 2, {
-    width: 400,
-    yoyo: true,
-    repeat: -1,
-    ease: Power2.easeInOut
-  })
-  document.body.addEventListener('click', stopTween)
-  function stopTween (e) {
-    tween.pause()
-    document.body.removeEventListener('click', stopTween)
-  }
-})
-
-const svgContainer = document.querySelector('.s-demo-svg')
-svgContainer.addEventListener('click', e => {
-  e.stopPropagation()
-  let tween = new TimelineMax()
-  tween.to(svgContainer, 2, {
-    width: 200,
-    yoyo: true,
-    repeat: -1,
-    ease: Power2.easeInOut
-  })
-  document.body.addEventListener('click', stopTween)
-  function stopTween (e) {
-    tween.pause()
-    document.body.removeEventListener('click', stopTween)
-  }
-})
+}))
 
 // Controlled Scaling
 // ==========

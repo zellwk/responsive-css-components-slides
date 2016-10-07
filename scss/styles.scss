@@ -120,6 +120,12 @@ h2 + .s-modular-demo .c-demo {
     margin-top: vr(0.75);
     max-width: vr(28);
   }
+
+  img {
+    display: block;
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 @for $i from 1 through 3 {
@@ -447,6 +453,15 @@ h2 + .s-modular-demo .c-demo {
   border: 5px solid red;
 }
 
+.c-green {
+  color: color(ulfro);
+}
+
+.c-red {
+  color: red;
+}
+
+
 .creds {
   position: absolute;
   top: auto;
@@ -458,4 +473,12 @@ h2 + .s-modular-demo .c-demo {
   span {
     display: block;
   }
+}
+
+.btn {
+  display: inline-block;
+  background: color(ulfro);
+  color: white;
+  padding: 0.5em 0.75em;
+  margin: 0.125em 0;
 }
